@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-//NOVATO 
-
 int main ()
 {
     char estado1;            // LETRA DO ESTADO
@@ -16,14 +9,18 @@ int main ()
     float area1;             // TAMANHO DO ESTADO EM KM
     float pib1;              // VALOR DO PRODUTO INTERNO BRUTO DO ESTADO
     int point1;              // NÚMERO DE PONTOS TURÍSTICO DO ESTADO
-
-    char estado2;            // LETRA DO ESTADO
-    char codigo2[50];        // CODIGO DA CARTA DO ESTADO
-    char NdC2[50];           // NOME DO ESTADO
-    int população2;          // NUMERO DE PESSOA NO ESTADO
-    float area2;             // TAMANHO DO ESTADO EM KM
-    float pib2;              // VALOR DO PRODUTO INTERNO BRUTO DO ESTADO
-    int point2;              // NÚMERO DE PONTOS TURÍSTICO DO ESTADO
+    float CDP1;              // CALCULA DENSIDADE POULACIONAL
+    float PIBC1;             // CALCULA PIB PER CAPITA
+   
+    char estado2;            // LETRA DO ESTADO 2
+    char codigo2[50];        // CODIGO DA CARTA DO ESTADO 2
+    char NdC2[50];           // NOME DO ESTADO 2
+    int população2;          // NUMERO DE PESSOA NO ESTADO 2
+    float area2;             // TAMANHO DO ESTADO EM KM 2
+    float pib2;              // VALOR DO PRODUTO INTERNO BRUTO DO ESTADO 2
+    int point2;              // NÚMERO DE PONTOS TURÍSTICO DO ESTADO 2
+    float CDP2;              // CALCULA DENSIDADE POULACIONAL 2
+    float PIBC2;             // CALCULA PIB PER CAPITA 2
 
     // COMEÇA FALANDO QUAL E O NOME DO JOGO ESTAMOS A JOGAR
     printf("JOGO DO SUPER TRUNFO\n"); 
@@ -59,6 +56,12 @@ int main ()
     printf("Digite a Quantidade de Pontos Turisticos: \n");
     scanf("%d", &point1);
 
+    // FAZ O CALCULO DA DIVISÃO DENSIDADE POPULACIONAL
+    CDP1 = população1 / area1;
+
+    // FAZ O CALCULO DA DIVISÃO
+    PIBC1 = pib1 / população1;
+    
     // IMPRESSÃO DAS INFORMAÇÕES DA PRIMEIRA CARTA
 
     printf("ESTADO 1: %c\n", estado1);
@@ -68,6 +71,8 @@ int main ()
     printf("ÁREA 1: %f KM\n", area1);
     printf("PIB 1: %f Bilhões\n",pib1);
     printf("PONTOS TURÍSTICOS 1: %d\n",point1);
+    printf("Densidade Populacional: %f\n", CDP1);
+    printf("PIB per Capita: %f\n",PIBC1);
 
     // ENVIA TEXTO PARA COMEÇAR A SALVAR INFORMÇÕES DA SEGUNDA CARTA
     printf("COMEÇAR O SALVAMENTO DA SEGUNDA CARTA\n");
@@ -100,6 +105,12 @@ int main ()
     printf("Digite a Quantidade de Pontos Turisticos 2: \n");
     scanf("%d", &point2);
 
+    // FAZ O CALCULO DA DIVISÃO DENSIDADE POPULACIONAL
+    CDP2 = população2 / area2;
+
+    // FAZ O CALCULO DA DIVISÃO
+    PIBC2 = pib2 / população2;
+
     // IMPRESSÃO DAS INFORMAÇÕES DA SEGUNDA CARTA
 
     printf("ESTADO 2: %c\n", estado2);
@@ -109,6 +120,7 @@ int main ()
     printf("ÁREA 2: %f KM\n", area2);
     printf("PIB 2: %f Bilhões\n",pib2);
     printf("PONTOS TURÍSTICOS 2: %d\n",point2);
+    printf("Densidade Populacional: %f\n", CDP2);
+    printf("PIB per Capita: %f\n",PIBC2);
 }
-
 
